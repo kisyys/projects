@@ -1,0 +1,55 @@
+body {
+	color: #fdb44b;
+	/* background-color:#fdb44b ; */
+	background-image: linear-gradient(to bottom left, #00204a, #005792);
+}
+
+a {
+	font-size: 20px;
+}
+
+@media screen and (min-width: 780px) {
+	#food2 { 	
+			display:none;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	#food1 { 	
+			display:none;
+	}
+	
+}
+
+@media screen and (min-width: 1001px) {
+	h1 { 	
+		font-size: 30px;
+		font-weight: bold;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	h1 { 	
+		font-size: 26px;
+		font-weight: bold;
+	}
+}
+
+#instructions {
+	font-family: Verdana;
+}
+
+.img-fluid { 
+	width: auto; 
+	height: auto;
+}
+
+.btn{
+	color: black;
+	background-color:gold;
+}
+
+img {
+  border-radius: 50%;
+  
+}
