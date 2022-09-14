@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<script src="scripts.js" defer></script>
+				<!-- Required meta tags -->
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+				<!-- Bootstrap CSS -->
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="styles.css">	
+		<title>Tasklendar</title>
+	</head>
+	<body onload="whatMonth(0)">
+
+		<div class="container">
+
+			<div class="row"  style="margin:auto;">		
+				<div class="col-12" style="margin:auto;">
+					<h2 id="month_year"></h2>
+				</div>
+			</div>
+
+			<div class="row"  style="margin:auto;">		
+				<div class="col-3" style="margin:auto;">
+					<p id="p0" style="text-align:left" onclick="step(-1)">
+						<b> Previous </b>					
+					</p>
+				</div>
+
+				<div class="col-2" style="margin:auto;">
+					<p id="p1" style="text-align:center" onclick="info()">
+						<b> Info  </b>					
+					</p>
+				</div>
+
+				<div class="col-2" style="margin:auto;">
+					<p id="p2" style="text-align:center" onclick="tasks()">
+						<b> Tasks  </b>					
+					</p>
+				</div>
+				
+				<div class="col-2" style="margin:auto;">
+					<p id="p3" style="text-align:center" onclick="stats()">
+						<b> Stats  </b>					
+					</p>
+				</div>
+
+				<div class="col-3" style="margin:auto;">
+					<p id="p4" style="text-align:right" onclick="step(1)">
+						<b> Next </b>					
+					</p>
+				</div>
+			</div>
+
+			<div class="row"  style="margin:auto;">		
+				<div class="col-12" style="margin:auto;">
+					<div id="app-calendar1"></div>
+				</div>
+			</div>
+
+			<div class="row"  style="margin:auto;">		
+				<div class="col-12" style="margin:auto;">
+					<div id="app-calendar2"></div>
+				</div>
+			</div>
+
+			<div class="row"  style="margin:auto;">		
+				<div class="col-6">
+					<div id="tasks0"></div>
+				</div>
+				<div class="col-6">
+					<div id="tasks01"></div>
+				</div>
+			</div>
+
+			<div class="row"  style="margin:auto;">		
+				<div class="col-6" style="margin:auto;">
+					<div id="tasks00"></div>
+				</div>
+				<div class="col-6">
+					<div id="tasks001"></div>
+				</div>
+			</div>
+
+			<div class="row"  style="margin:auto;">		
+				<div class="col-6" style="margin:auto;">
+					<div id="tasks1"></div>
+				</div>
+				<div class="col-6" style="margin:auto;">
+					<div id="tasks2"></div>
+				</div>
+			</div>
+
+			<div class="row"  style="margin:auto;">		
+				<div class="col-12" style="margin:auto;">
+					<div id="info0"></div>
+				</div>
+			</div>
+		</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+  </body>
+</html>
