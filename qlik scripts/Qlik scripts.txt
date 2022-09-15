@@ -1,0 +1,268 @@
+Books:
+LOAD * 
+FROM
+[lib://CVSs/books.csv]
+(txt, utf8, embedded labels, delimiter is ',', msq);
+
+Book_tags:
+LOAD * 
+FROM
+[lib://CVSs/book_tags.csv]
+(txt, utf8, embedded labels, delimiter is ',', msq);
+
+Tags:
+LOAD * 
+FROM
+[lib://CVSs/tags.csv]
+(txt, utf8, embedded labels, delimiter is ',', msq);
+
+Ratings:
+LOAD * 
+FROM
+[lib://CVSs/ratings.csv]
+(txt, utf8, embedded labels, delimiter is ',', msq);
+
+Tehtava3_1:
+LOAD isbn13, Count(title) as eee Resident Books Group By isbn13;
+
+Tehtava3_2:
+LOAD isbn13, count(eee) as eee2 Resident Tehtava3_1 Where eee = 2 Group By isbn13;
+
+Tehtava3_3:
+LOAD title as title_2, isbn13 as isbn13_2
+FROM
+[lib://CVSs/books.csv]
+(txt, utf8, embedded labels, delimiter is ',', msq);
+
+JOIN
+
+Tehtava3_4:
+LOAD isbn13 as isbn13_2, isbn13 as isbn13_3, count(eee2) Resident Tehtava3_2 Group By isbn13;
+
+Tehtava3_5:
+LOAD title_2 as title_3, count(isbn13_2) Resident Tehtava3_3 Where isbn13_3 <> null() Group By title_2;
+
+Tehtava4_1:
+LOAD title as MinTitle, Min(original_publication_year) as MinYear Resident Books Group By title;
+
+Tehtava5_1:
+LOAD
+SubField(authors, ',') as authors2,
+book_id as book_id2
+Resident Books;
+
+Tehtava5_2:
+LOAD
+trim(authors2) as authors3,
+Count(book_id2) as book_idcount
+Resident Tehtava5_1
+Group By authors2;
+
+Tehtava5_3:
+LOAD
+authors3 as authors4,
+Sum(book_idcount) as book_idcount2
+Resident Tehtava5_2
+Group By authors3;
+
+Tehtava5_4:
+LOAD
+authors4 as authors5,
+Max(book_idcount2) as book_idcountmax
+Resident Tehtava5_3
+Group By authors4;
+
+Tehtava6_1:
+Load
+Count(goodreads_book_id) as goodreads_book_id_count
+Resident Book_tags
+Where goodreads_book_id = 31337
+Group By goodreads_book_id;
+
+Tehtava7_1:
+Load
+Sum(count) as count_sum
+Resident Book_tags
+Where tag_id = 30574
+Group By tag_id;
+
+Tehtava8_1:
+LOAD
+goodreads_book_id,
+tag_id
+FROM
+[lib://CVSs/Book_tags.csv]
+(txt, utf8, embedded labels, delimiter is ',', msq);
+
+JOIN
+
+Tehtava8_2:
+LOAD
+count(title) as titcount,
+goodreads_book_id,
+goodreads_book_id as goodreads_book_id_1984
+Resident Books
+Where title = '1984'
+Group By goodreads_book_id;
+
+Tehtava8_3:
+LOAD
+goodreads_book_id_1984,
+count(tag_id) as tag_id_1984_count
+Resident Tehtava8_1
+Where goodreads_book_id = goodreads_book_id_1984
+Group By goodreads_book_id_1984;
+
+Tehtava9_1:
+LOAD
+goodreads_book_id,
+title
+FROM
+[lib://CVSs/Books.csv]
+(txt, utf8, embedded labels, delimiter is ',', msq);
+
+Join
+
+Tehtava9_2:
+Load
+goodreads_book_id,
+goodreads_book_id as goodreads_book_id_32837,
+count(goodreads_book_id) as jeppis
+Resident Book_tags
+Where tag_id = 32837
+Group By goodreads_book_id;
+
+Tehtava9_3:
+Load 
+title as title_32837,
+count(goodreads_book_id) as jeppis2
+Resident Tehtava9_1
+Where goodreads_book_id = goodreads_book_id_32837
+Group By title;
+
+Tehtava10_1:
+Load
+tag_id,
+If(WildMatch(tag_name, '*history-of*'), 1, 0) as thistory
+Resident Tags;
+
+Tehtava10_2:
+Load
+tag_id as tag_id_history
+Resident Tehtava10_1
+Where thistory = 1;
+
+Tehtava11_1:
+Load 
+tag_id, 
+goodreads_book_id
+Resident Book_tags;
+
+Join
+
+Tehtava11_2:
+Load
+tag_id,
+tag_id as tag_id_classic
+Resident Tags
+Where tag_name = 'classic-poetry';
+
+Tehtava11_3:
+Load 
+Count(goodreads_book_id) as goodreads_book_id_classy_count
+Resident Tehtava11_1
+Where tag_id = tag_id_classic
+Group by tag_id;
+
+
+Tehtava17_1:
+Load
+book_id,
+user_id
+Resident Ratings;
+
+Join
+
+Tehtava17_2:
+Load
+book_id,
+book_id as book_id_6630
+Resident Ratings
+Where user_id = 6630;
+
+Tehtava17_3:
+Load 
+user_id as user_id_6630,
+Count(book_id_6630) as book_id_6630_count
+Resident Tehtava17_1
+Where user_id <> 6630
+Group by user_id;
+
+Tehtava17_4:
+Load 
+user_id_6630,
+Max(book_id_6630_count) as book_id_6630_count_max
+Resident Tehtava17_3
+Group by user_id_6630;
+
+Tehtava17_5:
+Load
+firstsortedvalue(user_id_6630, book_id_6630_count_max) as user_id_6630_max,
+firstsortedvalue(book_id_6630_count_max, book_id_6630_count_max) as book_id_6630_max
+Resident Tehtava17_4
+Group by user_id_6630;
+
+
+Tehtava22_1:
+Load
+tag_id,
+If(WildMatch(tag_name, 'fantasy'), 1, 0) as tfantasy
+Resident Tags;
+
+Tehtava22_2:
+Load
+tag_id,
+tag_id as tag_id_fantasy
+Resident Tehtava22_1
+Where tfantasy = 1;
+
+Join
+
+Tehtava22_3:
+Load
+tag_id,
+goodreads_book_id,
+count 
+Resident Book_tags;
+
+Tehtava22_4:
+Load 
+goodreads_book_id,
+goodreads_book_id as goodreads_book_id_fantasy
+Resident Tehtava22_2
+Where tag_id = tag_id_fantasy and count>10000;
+
+Join
+
+Tehtava22_5:
+Load
+goodreads_book_id,
+title,
+book_id,
+ratings_count
+Resident Books;
+
+Tehtava22_5:
+Load
+book_id,
+book_id as book_id_fantasy,
+title as title_fantasy
+Resident Tehtava22_4
+Where goodreads_book_id = goodreads_book_id_fantasy and ratings_count >= 5000;
+
+Tehtava22_6:
+Load
+book_id,
+Stdev(rating) as Stdev_rating
+Resident Ratings
+Group By book_id;
