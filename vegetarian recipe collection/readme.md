@@ -9,5 +9,5 @@ User can select the desirable meal from the menu and after clicking the meal, th
 
 Also, as an alternative, user can click a random meal, which will randomly generate the recipe for random meal.
 
-## Pics
+## Pictures
 ![alt text](pic1.png)

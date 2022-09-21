@@ -7,5 +7,5 @@ To learn to use PyGame library for the game itself and machine learning library 
 ## Status
 Game is ready. No further development.
 
-## Pics
+## Pictures
 ![alt text](pic1.png)

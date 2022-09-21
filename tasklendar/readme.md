@@ -14,6 +14,6 @@ In the stats menu you can track your progress. This is still very basic stats me
 ## Disclaimer
 Added tasks, stats and history are saved on your browser's local storage, so if you clear the history in your browser, all the created data in local storage will be cleared also.
 
-## Pics
+## Pictures
 
-![alt text](tasklander1.png)
+![alt text](pic1.png)
