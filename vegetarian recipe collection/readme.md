@@ -11,3 +11,5 @@ Also, as an alternative, user can click a random meal, which will randomly gener
 
 ## Pictures
 ![alt text](pic1.png)
+![alt text](pic2.png)
+![alt text](pic3.png)
