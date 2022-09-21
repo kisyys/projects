@@ -1,10 +1,10 @@
 # Pong game
 Code is based on Computerphile Youtube channel videos: https://www.youtube.com/playlist?list=PLzH6n4zXuckoUWpzSEpQNW6I8rXIzyi8w
 
-## Purpose of project
+## Purpose of the project
 To learn to use PyGame library for the game itself and machine learning library for computer player's actions.
 
-## Status
+## Status of the project
 Game is ready. No further development.
 
 ## Pictures
