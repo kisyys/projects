@@ -23,7 +23,6 @@ Ready to use. Development idea:
 - Create an alternative for swipe action
 
 ## Pictures
-![alt text](pic1.png)
-![alt text](pic2.png)
-![alt text](pic3.png)
 <img src="pic1.png" width="50%" />
+<img src="pic2.png" width="50%" />
+<img src="pic3.png" width="50%" />
