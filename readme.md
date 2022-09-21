@@ -4,20 +4,24 @@ This repository includes my coding projects' source codes and descriptions of th
 ### Used languages:
 
 #### JavaScript, CSS, HTML
-- [Calendar (Tasklendar:)](https://kisyys.github.io/tasklendar/) a personal coding project for smartphone use to gamify different kinds of tasks which you would like to achieve during a day. Design is based on a single-page application (SPA) principle which allows a website to dynamically rewrite the current web page with new data according to user interactions.
+- [Calendar (Tasklendar:)](https://github.com/kisyys/projects/tree/main/tasklendar/) a personal coding project for smartphone use to gamify different kinds of tasks which you would like to achieve during a day. Design is based on a single-page application (SPA) principle which allows a website to dynamically rewrite the current web page with new data according to user interactions. Application published at https://kisyys.github.io/tasklendar/
 
-- [Vegetarian recipe collection:](https://kisyys.github.io/tasklendar/) the first JavaScript based personal coding project to create vegetarian recipe collection in Finnish by standardising layout for recipes found on the Internet. Design is based on SPA.
+- [Vegetarian recipe collection:](https://github.com/kisyys/projects/tree/main/vegetarian%20recipe%20collection) the first JavaScript based personal coding project to create vegetarian recipe collection in Finnish by standardising layout for recipes found on the Internet. Design is based on SPA. Application published at https://kisyys.github.io/kasvis/
 
 #### Python
-- Poker game (ongoing)
-- Pong game, using ML library (found at Computerphile YouTube channel)
+- [Poker game](https://github.com/kisyys/projects/tree/main/poker/) (development ongoing)
+- [Pong game](https://github.com/kisyys/projects/tree/main/pong/), using ML library (found at Computerphile YouTube channel)
 
 #### Java
-- Automatic recipe layout creation from text-file
+- [Automatic recipe layout creation from text-file](https://github.com/kisyys/projects/tree/main/recipe%20creator/)
+
 
 #### SQL
-- Database for tracking packages (with Java)
-- Database for forecasting
+- [Database for tracking packages (with Java](https://github.com/kisyys/projects/tree/main/database%20for%20tracking%20packages/)
+- [Database for forecasting](https://github.com/kisyys/projects/tree/main/database%20for%20forecasting/)
+
 
 #### Qlik scripting
-- Scripted solutions for entry exam 2019 of Computer Science in University of Helsinki
+- [Scripted solutions](https://github.com/kisyys/projects/tree/main/qlik%20scripts/) for [entry exam 2019](https://ohjelmointi-20.mooc.fi/349765f0e0cfb8f3b5de75b297119a63/2019.pdf) of Computer Science in University of Helsinki
+
+
