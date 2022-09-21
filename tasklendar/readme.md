@@ -16,4 +16,4 @@ Added tasks, stats and history are saved on your browser's local storage, so if 
 
 ## Pics
 
-![alt text](https://github.com/kisyys/projects/blob/main/tasklendar/tasklander1.png)
+![alt text](tasklander1.png)
