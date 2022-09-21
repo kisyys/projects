@@ -1,5 +1,5 @@
 # Tasklendar
-Can be found and used at [https://github.com/facebook/create-react-app](https://kisyys.github.io/tasklendar/).
+Can be found and used at [https://kisyys.github.io/tasklendar/](https://kisyys.github.io/tasklendar/).
 
 ## Purpose
 To gamify different kinds of tasks which you would like to achieve during a day. Tasks can be related to anything from sports to cleaning.
