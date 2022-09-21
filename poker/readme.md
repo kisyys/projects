@@ -5,7 +5,7 @@ Can be found and used at
 To create Texas hold ’em game with Python language.
 
 ## Status of the project
-Game is not finished but works generally as proof of concept. Development is ongoing.
+Game is not finished but works generally as a proof of concept. Development is ongoing.
 
 ## Pictures
 ![alt text](pic1.png)
