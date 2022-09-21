@@ -10,5 +10,4 @@ User can select the desirable meal from the menu and after clicking the meal, th
 Also alternative, user can click random meal, which randomly generates the repice for random meal.
 
 ## Pics
-![alt text](https://github.com/kisyys/projects/blob/main/vegetarian recipe collection
-/pic1.png)
+![alt text](https://github.com/kisyys/projects/blob/main/vegetarian recipe collection/pic1.png?raw=true "Title")
