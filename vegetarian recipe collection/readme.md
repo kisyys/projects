@@ -7,7 +7,7 @@ To create vegetarian recipe collection in Finnish by standardising layout for re
 ## How
 User can select the desirable meal from the menu and after clicking the meal, the app will generate the recipe. User can also make shopping list for the missing ingredients.
 
-Also alternative, user can click random meal, which randomly generates the repice for random meal.
+Also, as an alternative, user can click a random meal, which will randomly generate the recipe for random meal.
 
 ## Pics
 ![alt text](pic1.png)
