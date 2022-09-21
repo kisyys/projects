@@ -1,7 +1,7 @@
 # Tasklendar
 Can be found and used at [https://kisyys.github.io/tasklendar/](https://kisyys.github.io/tasklendar/).
 
-## Purpose
+## Purpose of the project
 To gamify different kinds of tasks which you would like to achieve during a day. Tasks can be related to anything from sports to cleaning.
 
 ## How

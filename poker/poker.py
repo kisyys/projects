@@ -80,7 +80,7 @@ class Holdem:
         return self.k.get_koko()
     
     def game(self):
-        self.pelaajat.append(Pelaaja('Lellu',1000))
+        self.pelaajat.append(Pelaaja('Tietokone',1000))
         self.maara = int(input('Montako pelaajaa? '))
         for i in range(0,self.maara):
             nimi = input('Pelaajan'+str(i+1)+ ' nimi? ')
@@ -101,7 +101,7 @@ class Holdem:
                 obj.add_kortti(self.k.get_kortti()) 
                 print('Pelaajan ' + obj.get_nimi() + ' stack on ' + str(obj.get_stack()))
                 print('')
-                if(obj.get_nimi()!='Lellu'):
+                if(obj.get_nimi()!='Tietokone'):
                     print('Pelaajan ' + obj.get_nimi() + ' kortit:')
                     print(obj.get_kortit())
                 
@@ -113,24 +113,24 @@ class Holdem:
             panos1=randrange(200)
             for obj in self.pelaajat:   
 
-                if(obj.get_nimi()=='Lellu'):   
+                if(obj.get_nimi()=='Tietokone'):   
                     if(obj.get_stack()<=panos1):
                         print('All in')
                         self.potti = self.potti + obj.get_stack()
                         obj.add_stack(-obj.get_stack())
                     else:
-                        print('Lellu panosti ' + str(panos1))
+                        print('Tietokone panosti ' + str(panos1))
                         self.potti = self.potti + panos1
                         obj.add_stack(-panos1)
 
 
                 else:
-                    kysy = input('Pelaaja ' + obj.get_nimi() + ' foldaatko =0, maksatko =1 vai korotatko =2?')
+                    kysy = input('Pelaaja ' + obj.get_nimi() + ' foldaatko =0, maksatko/sökötätkö =1 vai korotatko =2?')
                     if(kysy =='0'):
                             self.fold =1
-                            print('Lellu voitti potin ' + str(self.potti))
+                            print('Tietokone voitti potin ' + str(self.potti))
                             for obj in self.pelaajat:
-                                if(obj.get_nimi()=='Lellu'):
+                                if(obj.get_nimi()=='Tietokone'):
                                     obj.add_stack(self.potti)
                     if(kysy=='1'):                        
                         if(obj.get_stack()<=panos1):
@@ -159,24 +159,24 @@ class Holdem:
                 print(str(flop1) + ' ' +str(flop2) + ' ' +str(flop3))
                 panos1=randrange(200)
                 for obj in self.pelaajat:  
-                    if(obj.get_nimi()=='Lellu'):   
+                    if(obj.get_nimi()=='Tietokone'):   
                         if(obj.get_stack()<=panos1):
                             print('All in')
                             self.potti = self.potti + obj.get_stack()
                             obj.add_stack(-obj.get_stack())
                         else:
-                            print('Lellu panosti ' + str(panos1))
+                            print('Tietokone panosti ' + str(panos1))
                             self.potti = self.potti + panos1
                             obj.add_stack(-panos1)
 
     
                     else:
-                        kysy = input('Pelaaja ' + obj.get_nimi() + ' foldaatko =0, maksatko =1 vai korotatko =2?')
+                        kysy = input('Pelaaja ' + obj.get_nimi() + ' foldaatko =0, maksatko/sökötätkö =1 vai korotatko =2?')
                         if(kysy =='0'):
                             self.fold =1
-                            print('Lellu voitti potin ' + str(self.potti))
+                            print('Tietokone voitti potin ' + str(self.potti))
                             for obj in self.pelaajat:
-                                if(obj.get_nimi()=='Lellu'):
+                                if(obj.get_nimi()=='Tietokone'):
                                     obj.add_stack(self.potti)
                         if(kysy=='1'):
                             if(obj.get_stack()<=panos1):
@@ -415,7 +415,7 @@ class GUI(object):
         self.centralwidget.setObjectName("centralwidget")
         
         self.label_tapahtuma = QtWidgets.QLabel(self.centralwidget)
-        self.label_tapahtuma.setGeometry(QtCore.QRect(100, 750, 300, 300))
+        self.label_tapahtuma.setGeometry(QtCore.QRect(50, 750, 300, 300))
         self.label_tapahtuma.setObjectName("label_tapahtuma")
         
         self.label_potti = QtWidgets.QLabel(self.centralwidget)
@@ -423,49 +423,49 @@ class GUI(object):
         self.label_potti.setObjectName("label_potti")
         
         self.label_p1_stack = QtWidgets.QLabel(self.centralwidget)
-        self.label_p1_stack.setGeometry(QtCore.QRect(900, 825, 100, 100))
+        self.label_p1_stack.setGeometry(QtCore.QRect(1000, 825, 100, 100))
         self.label_p1_stack.setObjectName("label_p2_stack")
         
         self.label_p2_stack = QtWidgets.QLabel(self.centralwidget)
-        self.label_p2_stack.setGeometry(QtCore.QRect(900, 150, 100, 100))
+        self.label_p2_stack.setGeometry(QtCore.QRect(1000, 150, 100, 100))
         self.label_p2_stack.setObjectName("label_p1_stack")
         
         self.text_panos = QtWidgets.QTextEdit(self.centralwidget)
-        self.text_panos.setGeometry(QtCore.QRect(900, 750, 75, 23))
+        self.text_panos.setGeometry(QtCore.QRect(1000, 750, 75, 23))
         self.text_panos.setObjectName("slider_panos")
         
         self.slider_panos = QtWidgets.QSlider(self.centralwidget)
-        self.slider_panos.setGeometry(QtCore.QRect(900, 780, 150, 23))
+        self.slider_panos.setGeometry(QtCore.QRect(1000, 780, 150, 23))
         self.slider_panos.setOrientation(QtCore.Qt.Horizontal)
         self.slider_panos.setObjectName("slider_panos")
         
         self.button_korotus = QtWidgets.QPushButton(self.centralwidget)
-        self.button_korotus.setGeometry(QtCore.QRect(800, 750, 75, 23))
+        self.button_korotus.setGeometry(QtCore.QRect(800, 750, 100, 23))
         self.button_korotus.setObjectName("button_korotus")
         
         self.button_maksu = QtWidgets.QPushButton(self.centralwidget)
-        self.button_maksu.setGeometry(QtCore.QRect(800, 825, 75, 23))
+        self.button_maksu.setGeometry(QtCore.QRect(800, 825, 100, 23))
         self.button_maksu.setObjectName("button_maksu")
         
         self.button_fold = QtWidgets.QPushButton(self.centralwidget)
-        self.button_fold.setGeometry(QtCore.QRect(800, 900, 75, 23))
+        self.button_fold.setGeometry(QtCore.QRect(800, 900, 100, 23))
         self.button_fold.setObjectName("button_fold")
         
-        #Lellu_voitti
+        #Tietokone_voitti
         self.horizontalLayoutWidget_3 = QtWidgets.QWidget(self.centralwidget)
         self.horizontalLayoutWidget_3.setGeometry(QtCore.QRect(50, 50, 300, 200))
         self.horizontalLayoutWidget_3.setObjectName("horizontalLayoutWidget_3")
-        self.lellu_voitti = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_3)
-        self.lellu_voitti.setContentsMargins(0, 0, 0, 0)
-        self.lellu_voitti.setObjectName("lellu_voitti")
+        self.Tietokone_voitti = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_3)
+        self.Tietokone_voitti.setContentsMargins(0, 0, 0, 0)
+        self.Tietokone_voitti.setObjectName("Tietokone_voitti")
         
-        self.lellu_voitti2 = QLabel()
-        self.movie = QMovie(r'C:\Users\Kimmo\Python 3\spyder\lellu.gif') 
-        self.lellu_voitti2.setMovie(self.movie) 
+        self.Tietokone_voitti2 = QLabel()
+        self.movie = QMovie(r'C:\Users\Kimmo\Python 3\spyder\Tietokone.gif') 
+        self.Tietokone_voitti2.setMovie(self.movie) 
  
         #self.p1_kortti1.setPixmap(QPixmap(self.kortti1()))
         #self.p1_kortti2.setPixmap(QPixmap(self.kortti1()))
-        self.lellu_voitti.addWidget(self.lellu_voitti2)  
+        self.Tietokone_voitti.addWidget(self.Tietokone_voitti2)  
         
         #Pelaaja1
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
@@ -532,7 +532,7 @@ class GUI(object):
         
         self.slider_panos.valueChanged[int].connect(self.changeValue)
         
-        self.pelaajat.append(Pelaaja('Lellu',500))
+        self.pelaajat.append(Pelaaja('Tietokone',500))
         self.pelaajat.append(Pelaaja('Kimmo',500))
         
         
@@ -555,10 +555,8 @@ class GUI(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.button_korotus.setText(_translate("MainWindow", "Korotus"))
-        self.button_maksu.setText(_translate("MainWindow", "Maksa"))
+        self.button_maksu.setText(_translate("MainWindow", "Maksa / Sökötys"))
         self.button_fold.setText(_translate("MainWindow", "Fold"))
-        #self.label_tapahtuma.setText(_translate("MainWindow", "Tapahtuman kuvaus dasdasdnkslda \n snkldasd klsndalkdsasnkdla nmklda"))
-        #self.label_tapahtuma.adjustSize()
     
     def peli(self):       
         self.nollaus()  
@@ -595,7 +593,7 @@ class GUI(object):
             obj.add_kortti(self.k.get_kortti())
             obj.add_kortti(self.k.get_kortti())
             print(obj.get_nimi())
-            if(obj.get_nimi()!='Lellu'):
+            if(obj.get_nimi()!='Tietokone'):
                 self.p1_kortti1.setPixmap(QPixmap(self.kortti1(obj.get_kortit()[0])))
                 self.p1_kortti2.setPixmap(QPixmap(self.kortti1(obj.get_kortit()[1])))
                 self.label_p1_stack.setText('Stack: ' + str(obj.get_stack()))
@@ -611,7 +609,7 @@ class GUI(object):
     def panostus(self):
         self.panos1=randrange(200)
         for obj in self.pelaajat:   
-            if(obj.get_nimi()=='Lellu'):   
+            if(obj.get_nimi()=='Tietokone'):   
                 if(obj.get_stack()<=self.panos1):
                     #print('All in')
                     self.potti = self.potti + obj.get_stack()
@@ -619,7 +617,7 @@ class GUI(object):
                     self.label_p2_stack.setText('Stack: ' + str(obj.get_stack()))
                     self.label_p2_stack.adjustSize()
                 else:
-                    print('Lellu panosti ' + str(self.panos1))
+                    print('Tietokone panosti ' + str(self.panos1))
                     self.potti = self.potti + self.panos1
                     obj.add_stack(-self.panos1)
                     self.label_p2_stack.setText('Stack: ' + str(obj.get_stack()))
@@ -628,9 +626,9 @@ class GUI(object):
         
         self.rivit = self.kuvaus.split('\n')
         if(len(self.rivit)>=6):
-            self.kuvaus = self.rivit[1] +'\n' + self.rivit[2] +'\n' + self.rivit[3] +'\n' + self.rivit[4] +'\n' + self.rivit[5] +'\n'  + 'Lellu panosti ' + str(self.panos1) +'\n'
+            self.kuvaus = self.rivit[1] +'\n' + self.rivit[2] +'\n' + self.rivit[3] +'\n' + self.rivit[4] +'\n' + self.rivit[5] +'\n'  + 'Tietokone panosti ' + str(self.panos1) +'\n'
         else:
-            self.kuvaus = self.kuvaus + 'Lellu panosti ' + str(self.panos1) +'\n'
+            self.kuvaus = self.kuvaus + 'Tietokone panosti ' + str(self.panos1) +'\n'
         
         
         self.label_potti.setText('Potti: ' + str(self.potti))
@@ -640,12 +638,12 @@ class GUI(object):
         self.label_tapahtuma.adjustSize()        
     
     def fold(self):
-        self.kuvaus = self.kuvaus + 'Lellu voitti potin ' + str(self.potti) +'\n'
+        self.kuvaus = self.kuvaus + 'Tietokone voitti potin ' + str(self.potti) +'\n'
         self.label_tapahtuma.setText(self.kuvaus)
         self.label_tapahtuma.adjustSize()
         
         for obj in self.pelaajat:
-            if(obj.get_nimi()=='Lellu'):
+            if(obj.get_nimi()=='Tietokone'):
                 obj.add_stack(self.potti)
         #time.sleep(5)
         self.poyta_kortti1.setPixmap(QPixmap(QImage(r'C:\Users\Kimmo\Python 3\spyder\pakka\pakka.png')))
@@ -659,7 +657,7 @@ class GUI(object):
     def maksu(self):   
         if(self.jarjestys==1):
             for obj in self.pelaajat:   
-                if(obj.get_nimi()!='Lellu'):   
+                if(obj.get_nimi()!='Tietokone'):   
                     if(obj.get_stack()<=self.panos1):
                         #print('All in')
                         self.potti = self.potti + obj.get_stack()
@@ -687,9 +685,9 @@ class GUI(object):
             
             self.rivit = self.kuvaus.split('\n')
             if(len(self.rivit)>=6):
-                self.kuvaus = self.rivit[1] +'\n' + self.rivit[2] +'\n' + self.rivit[3] +'\n' + self.rivit[4] +'\n' + self.rivit[5] +'\n' + 'Maksu' +'\n'
+                self.kuvaus = self.rivit[1] +'\n' + self.rivit[2] +'\n' + self.rivit[3] +'\n' + self.rivit[4] +'\n' + self.rivit[5] +'\n' + 'Maksu / Sökötys' +'\n'
             else:
-                self.kuvaus = self.kuvaus + 'Maksu' +'\n'
+                self.kuvaus = self.kuvaus + 'Maksu / Sökötys' +'\n'
                 
             
             self.label_tapahtuma.setText(self.kuvaus)
@@ -713,9 +711,9 @@ class GUI(object):
             
             self.rivit = self.kuvaus.split('\n')
             if(len(self.rivit)>=6):
-                self.kuvaus = self.rivit[1] +'\n' + self.rivit[2] +'\n' + self.rivit[3] +'\n' + self.rivit[4] +'\n' + self.rivit[5] +'\n' + 'Maksu' +'\n'
+                self.kuvaus = self.rivit[1] +'\n' + self.rivit[2] +'\n' + self.rivit[3] +'\n' + self.rivit[4] +'\n' + self.rivit[5] +'\n' + 'Maksu / Sökötys' +'\n'
             else:
-                self.kuvaus = self.kuvaus + 'Maksu' +'\n'
+                self.kuvaus = self.kuvaus + 'Maksu / Sökötys' +'\n'
             
             self.label_tapahtuma.setText(self.kuvaus)
             self.label_tapahtuma.adjustSize()
@@ -737,9 +735,9 @@ class GUI(object):
             
             self.rivit = self.kuvaus.split('\n')
             if(len(self.rivit)>=6):
-                self.kuvaus = self.rivit[1] +'\n' + self.rivit[2] +'\n' + self.rivit[3] +'\n' + self.rivit[4] +'\n' + self.rivit[5] +'\n' + 'Maksu' +'\n'
+                self.kuvaus = self.rivit[1] +'\n' + self.rivit[2] +'\n' + self.rivit[3] +'\n' + self.rivit[4] +'\n' + self.rivit[5] +'\n' + 'Maksu / Sökötys' +'\n'
             else:
-                self.kuvaus = self.kuvaus + 'Maksu' +'\n'
+                self.kuvaus = self.kuvaus + 'Maksu / Sökötys' +'\n'
             
             self.label_tapahtuma.setText(self.kuvaus)
             self.label_tapahtuma.adjustSize()
@@ -756,7 +754,7 @@ class GUI(object):
             
         elif(self.jarjestys==0):
             #time.sleep(5)
-            self.kuvaus = self.kuvaus + 'Maksu' +'\n'
+            self.kuvaus = self.kuvaus + 'Maksu / Sökötys' +'\n'
             
             for obj in self.pelaajat:
                     a = Arvojarjestys(obj.get_kortit())
@@ -828,11 +826,11 @@ class GUI(object):
                     self.label_tapahtuma.setText(self.kuvaus)
                     self.label_tapahtuma.adjustSize()
                     
-                    #if(obj.get_nimi()!='Lellu'):
-                    #    self.lellu_voitti2.setPixmap(QPixmap(QImage(r'C:\Users\Kimmo\Python 3\spyder\lellu.gif')))
+                    #if(obj.get_nimi()!='Tietokone'):
+                    #    self.Tietokone_voitti2.setPixmap(QPixmap(QImage(r'C:\Users\Kimmo\Python 3\spyder\Tietokone.gif')))
                         
                      
-                    if(obj.get_nimi()!='Lellu'):
+                    if(obj.get_nimi()!='Tietokone'):
                         self.movie.start()
               
                     
@@ -842,7 +840,7 @@ class GUI(object):
                     self.label_potti.setText('Potti: ' + str(0))
                     self.label_potti.adjustSize() 
                     for obj in self.pelaajat:   
-                        if(obj.get_nimi()!='Lellu'):   
+                        if(obj.get_nimi()!='Tietokone'):   
                             self.label_p1_stack.setText('Stack paatos: ' + str(obj.get_stack()))
                             self.label_p1_stack.adjustSize()
                         else:
@@ -869,7 +867,7 @@ class GUI(object):
         if(self.jarjestys==2):
             
             for obj in self.pelaajat:
-                if(obj.get_nimi()!='Lellu'):
+                if(obj.get_nimi()!='Tietokone'):
                     if(obj.get_stack()<=self.panos2):
                         #print('All in')
                         self.potti = self.potti + obj.get_stack()
@@ -905,9 +903,9 @@ class GUI(object):
             
             self.rivit = self.kuvaus.split('\n')
             if(len(self.rivit)>=6):
-                self.kuvaus = self.rivit[1] +'\n' + self.rivit[2] +'\n' + self.rivit[3] +'\n' + self.rivit[4] +'\n' + self.rivit[5] +'\n' + 'Korotus ' + str(self.panos2) + ' Lellu maksoi' + '\n'
+                self.kuvaus = self.rivit[1] +'\n' + self.rivit[2] +'\n' + self.rivit[3] +'\n' + self.rivit[4] +'\n' + self.rivit[5] +'\n' + 'Korotus ' + str(self.panos2) + ' Tietokone maksoi' + '\n'
             else:
-                self.kuvaus = self.kuvaus + 'Korotus ' + str(self.panos2) + ' Lellu maksoi' + '\n'
+                self.kuvaus = self.kuvaus + 'Korotus ' + str(self.panos2) + ' Tietokone maksoi' + '\n'
             
             self.label_tapahtuma.setText(self.kuvaus)
             self.label_tapahtuma.adjustSize()
@@ -921,7 +919,7 @@ class GUI(object):
         elif(self.jarjestys==3):
             
             for obj in self.pelaajat:
-                if(obj.get_nimi()!='Lellu'):
+                if(obj.get_nimi()!='Tietokone'):
                     if(obj.get_stack()<=self.panos2):
                         #print('All in')
                         self.potti = self.potti + obj.get_stack()
@@ -956,9 +954,9 @@ class GUI(object):
             
             self.rivit = self.kuvaus.split('\n')
             if(len(self.rivit)>=6):
-                self.kuvaus = self.rivit[1] +'\n' + self.rivit[2] +'\n' + self.rivit[3] +'\n' + self.rivit[4] +'\n' + self.rivit[5] +'\n' + 'Korotus ' + str(self.panos2) + ' Lellu maksoi' +'\n'
+                self.kuvaus = self.rivit[1] +'\n' + self.rivit[2] +'\n' + self.rivit[3] +'\n' + self.rivit[4] +'\n' + self.rivit[5] +'\n' + 'Korotus ' + str(self.panos2) + ' Tietokone maksoi' +'\n'
             else:
-                self.kuvaus = self.kuvaus + 'Korotus ' + str(self.panos2) + ' Lellu maksoi' +'\n'
+                self.kuvaus = self.kuvaus + 'Korotus ' + str(self.panos2) + ' Tietokone maksoi' +'\n'
             
             self.label_tapahtuma.setText(self.kuvaus)
             self.label_tapahtuma.adjustSize()
@@ -971,7 +969,7 @@ class GUI(object):
             
         elif(self.jarjestys==0):
             #time.sleep(5)
-            self.kuvaus = self.kuvaus + 'Maksu' +'\n'
+            self.kuvaus = self.kuvaus + 'Maksu / Sökötys' +'\n'
             
             for obj in self.pelaajat:
                     a = Arvojarjestys(obj.get_kortit())
@@ -1043,8 +1041,8 @@ class GUI(object):
                     self.label_tapahtuma.setText(self.kuvaus)
                     self.label_tapahtuma.adjustSize()
                     
-                    if(obj.get_nimi()!='Lellu'):
-                        self.lellu_voitti2.setPixmap(QPixmap(QImage(r'C:\Users\Kimmo\Python 3\spyder\lellu.png')))
+                    if(obj.get_nimi()!='Tietokone'):
+                        self.Tietokone_voitti2.setPixmap(QPixmap(QImage(r'C:\Users\Kimmo\Python 3\spyder\Tietokone.png')))
                     
                     print('')
                     print('Pelaajalta ' + obj.get_nimi() + ' loppui rahat ja peli päättyy')
@@ -1052,7 +1050,7 @@ class GUI(object):
                     self.label_potti.setText('Potti: ' + str(0))
                     self.label_potti.adjustSize() 
                     for obj in self.pelaajat:   
-                        if(obj.get_nimi()!='Lellu'):   
+                        if(obj.get_nimi()!='Tietokone'):   
                             self.label_p1_stack.setText('Stack paatos: ' + str(obj.get_stack()))
                             self.label_p1_stack.adjustSize()
                         else:
@@ -1092,7 +1090,7 @@ class GUI(object):
     
     def changeValue(self, value):      
         for obj in self.pelaajat:
-                if(obj.get_nimi()!='Lellu'):
+                if(obj.get_nimi()!='Tietokone'):
                     x = obj.get_stack() + 5
 
         self.text_panos.setText(str(round(x*(value/100))))
@@ -1269,7 +1267,7 @@ class LoadingGif(object):
         FrontWindow.setCentralWidget(self.centralwidget) 
   
         # Loading the GIF 
-        self.movie = QMovie(r'C:\Users\Kimmo\Python 3\spyder\lellu.gif') 
+        self.movie = QMovie(r'C:\Users\Kimmo\Python 3\spyder\Tietokone.gif') 
         self.label33.setMovie(self.movie) 
   
         self.startAnimation() 
