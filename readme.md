@@ -3,13 +3,15 @@ This repository includes my coding projects' source codes and descriptions of th
 
 ### Used languages:
 
+[Calendar (Tasklendar)](https://kisyys.github.io/tasklendar/)
+
 #### JavaScript, CSS, HTML
-[Calendar (Tasklendar)] (https://kisyys.github.io/tasklendar/): a personal coding project for smartphone use to gamify different kinds of
+[Calendar (Tasklendar:)](https://kisyys.github.io/tasklendar/) a personal coding project for smartphone use to gamify different kinds of
 tasks which you would like to achieve during a day. Design is based on a single-page application
 (SPA) principle which allows a website to dynamically rewrite the current web page with new data
 according to user interactions.
 
-Vegetarian recipe collection: the first JavaScript based personal coding project to create vegetarian
+[Vegetarian recipe collection:](https://kisyys.github.io/tasklendar/) the first JavaScript based personal coding project to create vegetarian
 recipe collection in Finnish by standardising layout for recipes found on the Internet. Design is
 based on SPA.
 
