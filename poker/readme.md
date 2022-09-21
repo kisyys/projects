@@ -1,5 +1,4 @@
 # Texas hold ’em game (in Finnish)
-Can be found and used at 
 
 ## Purpose of the project
 To create Texas hold ’em game with Python language.
