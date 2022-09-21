@@ -26,3 +26,4 @@ Ready to use. Development idea:
 ![alt text](pic1.png)
 ![alt text](pic2.png)
 ![alt text](pic3.png)
+<img src="pic1.png" width="50%" />
