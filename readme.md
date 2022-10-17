@@ -4,7 +4,7 @@ This repository includes my coding projects' source codes and descriptions of th
 ### Used languages:
 
 #### JavaScript, CSS, HTML
-- [SAP UI5Fiori demo app:](https://github.com/kisyys/projects/tree/main/SAP%20UI5%20Fiori) a practise work with [SAPUI5 development framework](https://sapui5.hana.ondemand.com/#/topic/3da5f4be63264db99f2e5b04c5e853db.html) to build a demo app based on a Youtube-course: https://www.youtube.com/watch?v=C9cK2Z2JDLg
+- [SAP UI5Fiori demo app:](https://github.com/kisyys/projects/tree/main/SAPUI5%20Fiori) a practise work with [SAPUI5 development framework](https://sapui5.hana.ondemand.com/#/topic/3da5f4be63264db99f2e5b04c5e853db.html) to build a demo app based on a Youtube-course: https://www.youtube.com/watch?v=C9cK2Z2JDLg
 
 - [Calendar (Tasklendar:)](https://github.com/kisyys/projects/tree/main/tasklendar/) a personal coding project for smartphone use to gamify different kinds of tasks which you would like to achieve during a day. Design is based on a single-page application (SPA) principle which allows a website to dynamically rewrite the current web page with new data according to user interactions. Application is published at https://kisyys.github.io/tasklendar/
 
