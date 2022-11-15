@@ -1,5 +1,5 @@
 # Project 2: Movies in Finnkino
-Can be found and used at https://beautiful-swan-1b16c9.netlify.app/.
+Can be found and used at https://kisyys.github.io/movies/.
 
 ## Purpose of the project
 To show different movies in certain theatres and dates by using Finnkino's API which is based on XML format.
