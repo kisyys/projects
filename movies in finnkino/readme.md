@@ -1,4 +1,4 @@
-# Project 2: Movies in Finnkino
+# Movies in Finnkino
 Can be found and used at https://kisyys.github.io/movies/.
 
 ## Purpose of the project
