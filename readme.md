@@ -4,7 +4,7 @@ This repository includes my coding projects' source codes and descriptions of th
 ### Used languages:
 
 #### JavaScript, CSS, HTML
-- [Movies in Finnkino:](https://github.com/kisyys/projects/tree/main/movies%20in%20finnkino) a practise work to show different movies in certain theatres and dates by using Finnkino's API which is based on XML format. Application is published at https://kisyys.github.io/movies/
+- [Movies in Finnkino:](https://github.com/kisyys/projects/tree/main/movies%20in%20finnkino) a practice work to show different movies in certain theatres and dates by using Finnkino's API which is based on XML format. Application is published at https://kisyys.github.io/movies/
 
 - [Calendar (Tasklendar):](https://github.com/kisyys/projects/tree/main/tasklendar/) a personal coding project for smartphone use to gamify different kinds of tasks which you would like to achieve during a day. Design is based on a single-page application (SPA) principle which allows a website to dynamically rewrite the current web page with new data according to user interactions. Application is published at https://kisyys.github.io/tasklendar/
 
