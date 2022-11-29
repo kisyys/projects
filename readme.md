@@ -12,6 +12,8 @@ This repository includes my coding projects' source codes and descriptions of th
 
 - [SAPUI5 Fiori demo app:](https://github.com/kisyys/projects/tree/main/SAPUI5%20Fiori) a practice work with [SAPUI5 development framework](https://sapui5.hana.ondemand.com/#/topic/3da5f4be63264db99f2e5b04c5e853db.html) to build a demo app based on a YouTube-course: https://www.youtube.com/watch?v=C9cK2Z2JDLg
 
+- [Point and shoot game](https://github.com/kisyys/projects/tree/main/point%20and%20shoot%20game)
+
 #### Python
 - [Poker game](https://github.com/kisyys/projects/tree/main/poker/)
 - [Pong game](https://github.com/kisyys/projects/tree/main/pong/)
